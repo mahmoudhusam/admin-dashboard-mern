@@ -25,7 +25,7 @@ export const getUserPerformance = async (req, res) => {
           as: "affiliateStats",
         },
       },
-      { $unwind: "affiliateStats" },
+      { $unwind: "$affiliateStats" },
     ]);
 
     const saleTransactions = await Promise.all(
@@ -33,7 +33,6 @@ export const getUserPerformance = async (req, res) => {
         return Transaction.findById(id);
       })
     );
-
     const filteredSaleTransactions = saleTransactions.filter(
       (transaction) => transaction !== null
     );

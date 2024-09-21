@@ -3,10 +3,10 @@ import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
 import {
   DownloadOutlined,
-  Email,
   PointOfSale,
-  PersonAdd,
-  Traffic,
+  Groups,
+  CalendarMonth,
+  StackedBarChart,
 } from "@mui/icons-material";
 import {
   Box,
@@ -93,7 +93,7 @@ const Dashboard = () => {
           increase="+14%"
           description="Since last month"
           icon={
-            <Email
+            <Groups
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
@@ -124,7 +124,7 @@ const Dashboard = () => {
           increase="+5%"
           description="Since last month"
           icon={
-            <PersonAdd
+            <CalendarMonth
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
@@ -135,7 +135,7 @@ const Dashboard = () => {
           increase="+43%"
           description="Since last month"
           icon={
-            <Traffic
+            <StackedBarChart
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
