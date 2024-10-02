@@ -1,6 +1,6 @@
 # MERN Stack Admin Dashboard
 
-This project is a MERN (MongoDB, Express, React, Node.js) Admin Dashboard application. It features a fully functional dashboard for managing and visualizing product and transaction data, complete with charts, tables, and comprehensive user insights.
+This project is a full-featured MERN (MongoDB, Express, React, Node.js) Admin Dashboard application. Designed for managing and visualizing product and transaction data, it offers a comprehensive set of tools for admins, including interactive charts, data tables, and detailed user insights
 
 ## Project Overview
 
@@ -8,7 +8,7 @@ The Admin Dashboard allows users to track products, customers, transactions, and
 
 ### Key Features
 
-- **Dashboard Layout:** An interactive and responsive dashboard to monitor product and sales data.
+- **Dashboard Layout:** An interactive and responsive dashboard to monitor product, transaction and sales data.
 - **State Management:** Redux Toolkit is utilized for efficient state management across the application.
 - **Material UI:** A comprehensive component library for building the UI.
 - **Nivo Charts:** A charting library for visualizing data with dynamic charts.
@@ -44,10 +44,38 @@ The project is divided into two main folders:
 - MongoDB
 - npm or yarn
 
+
 ### Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/mahmoudhusam/admin-dashboard-mern.git
+   cd admin-dashboard-mern
+
+2. **Install dependencies:**
+    Navigate to both the `server` and `client` directories and run the following commands:
+
+   ```bash
+   cd server
+   npm install
+   
+   cd ../client
+   npm install   
+
+
+3. **Set Up Environment Variables:**
+
+   Create a .env file in the server directory and add your environment variables (e.g., MONGO_URI).
+
+4. **Run the Application:**:
+
+- ***Start the Backend Server:***
+   ```bash
+   cd server
+   npm run dev
+
+- ***Start the Frontend Server:***
+   ```bash
+   cd ../client
+   npm run start
