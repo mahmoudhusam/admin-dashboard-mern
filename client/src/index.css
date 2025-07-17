@@ -1,3 +1,4 @@
+/* index.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 html,
@@ -15,15 +16,21 @@ body,
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #7a7f9d;
+  background: #94a3b8;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #21295c;
+  background: #059669;
+  border-radius: 5px;
 }
 
 /* Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+/* Track on Hover */
 ::-webkit-scrollbar-track:hover {
-  background: #21295c;
+  background: #cbd5e1;
 }

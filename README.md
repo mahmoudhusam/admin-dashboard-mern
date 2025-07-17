@@ -1,81 +1,98 @@
-# MERN Stack Admin Dashboard
+# Admin Dashboard MERN App
 
-This project is a full-featured MERN (MongoDB, Express, React, Node.js) Admin Dashboard application. Designed for managing and visualizing product and transaction data, it offers a comprehensive set of tools for admins, including interactive charts, data tables, and detailed user insights
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/) [![MongoDB](https://img.shields.io/badge/MongoDB-4.0+-47A248?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/) [![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/) [![Express](https://img.shields.io/badge/Express-4.x-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/) [![Nivo](https://img.shields.io/badge/Nivo-0.x-FF6361?style=flat)]()
 
-## Project Overview
+A full‑stack MERN admin dashboard for managing products, customers, transactions, and visualizing sales analytics with dynamic charts.
 
-The Admin Dashboard allows users to track products, customers, transactions, and overall sales statistics. The application provides an interactive interface for managing data and generating analytics. The frontend is built with React, Redux Toolkit, Material UI, and Nivo Charts, while the backend uses Node.js, Express, and MongoDB.
+## 📸 Demo
+<p align="center">
+  <img src="./images/admin-dashboard-demo.png" alt="Admin Dashboard screenshot" width="700" />
+</p>
 
-### Key Features
 
-- **Dashboard Layout:** An interactive and responsive dashboard to monitor product, transaction and sales data.
-- **State Management:** Redux Toolkit is utilized for efficient state management across the application.
-- **Material UI:** A comprehensive component library for building the UI.
-- **Nivo Charts:** A charting library for visualizing data with dynamic charts.
-- **API Integration:** RESTful APIs for managing products, transactions, and user information.
-- **Geographic Insights:** Visual representation of user locations.
+## ✨ Key Features
 
-## Project Structure
+- 📊 **Interactive Charts**: Visualize data with Nivo bar, line, and pie charts
+- 🗂️ **Data Tables**: Sortable and filterable tables for products and transactions
+- 👥 **Customer Insights**: View user activity and geographic distribution
 
-The project is divided into two main folders:
+- 📱 **Responsive Layout**: Works on desktop and mobile devices
 
-- **server:** Contains the backend code with Node.js and Express.
-- **client:** Contains the frontend code built with React.
+## 🏗️ Project Structure
+
+```
+admin-dashboard-mern
+├─ server/         # Express API and MongoDB models
+├─ client/         # React frontend with Material UI
+└─ images/         # Screenshots and assets
+```
 
 ### Backend (`server`)
 
-- **Node.js:** Used as the runtime environment.
-- **Express.js:** Serves as the backend framework for handling requests and routing.
-- **MongoDB:** A NoSQL database for storing and managing application data.
-- **Mongoose:** Used for data modeling and schema validation.
+- **Node.js & Express**: REST API framework
+- **MongoDB & Mongoose**: Data storage and schema validation
+- **Controllers & Routes**: Organized API endpoints for products, users, transactions
 
 ### Frontend (`client`)
 
-- **React:** The JavaScript library for building user interfaces.
-- **Redux Toolkit:** Manages the application state.
-- **Material UI:** Provides a set of reusable components for building the UI.
-- **Nivo Charts:** Used to create dynamic and interactive charts for data visualization.
+- **React**: Component-based UI development
+- **Redux Toolkit**: Global state management
+- **Material UI**: UI component library
+- **Nivo Charts**: Data visualization with customizable charts
 
-## Installation and Setup
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
+- Node.js (v18 or higher)
+- MongoDB (local or Atlas)
 - npm or yarn
 
+### Setup & Run
 
-### Installation
+```bash
+# Clone repository
+git clone https://github.com/mahmoudhusam/admin-dashboard-mern.git
+cd admin-dashboard-mern
 
-1. **Clone the repository:**
+# Install dependencies
+cd server && npm install && cd ../client && npm install
 
-   ```bash
-   git clone https://github.com/mahmoudhusam/admin-dashboard-mern.git
-   cd admin-dashboard-mern
+# Start backend server 
+cd server && npm run dev
 
-2. **Install dependencies:**
-    Navigate to both the `server` and `client` directories and run the following commands:
+# In a separate terminal, start frontend 
+cd client && npm run start
+```
 
-   ```bash
-   cd server
-   npm install
-   
-   cd ../client
-   npm install   
+## ⚙️ Environment Variables
+
+### Server
+
+Create `server/.env`:
+
+```bash
+MONGO_URI=<your MongoDB connection URI>
+PORT=<server port, e.g., 3001>
+```
+- `MONGO_URI`: Your MongoDB connection string.
+- `PORT`: Port for the backend server (default: 3001).
+
+### Client
+
+Create `client/.env.local`:
+
+```bash
+REACT_APP_BASE_URL=http://localhost:<port number used in server/.env>
+```
+This ensures the frontend connects to your backend correctly.
+
+This sets the base URL for the frontend to connect to your backend.
+## 🛠️ Technologies Used
+
+- **Backend**: Node.js, Express, MongoDB, Mongoose
+- **Frontend**: React, Redux Toolkit, Material UI, Nivo Charts
+
+---
 
 
-3. **Set Up Environment Variables:**
-
-   Create a .env file in the server directory and add your environment variables (e.g., MONGO_URI).
-
-4. **Run the Application:**:
-
-- ***Start the Backend Server:***
-   ```bash
-   cd server
-   npm run dev
-
-- ***Start the Frontend Server:***
-   ```bash
-   cd ../client
-   npm run start
